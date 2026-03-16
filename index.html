@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Four AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Connect Four</h1>
+            <div class="controls">
+                <div class="control-group">
+                    <label for="difficulty">AI Difficulty:</label>
+                    <select id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <button id="reset-btn">New Game</button>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <div class="status-panel">
+                <div id="turn-indicator" class="indicator red"></div>
+                <h2 id="status-text">Your Turn!</h2>
+                <div id="ai-thinking" class="hidden">
+                    <span class="spinner"></span> AI is thinking...
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="game-canvas" width="700" height="600"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
